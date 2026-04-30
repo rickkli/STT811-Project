@@ -1,4 +1,4 @@
-# STT811-Project
+# STT811 Project: Customer Churn Prediction and Retention Analysis
 
 Customer churn modeling project (Telco churn) with an intervention-focused decision engine.
 
@@ -66,7 +66,7 @@ The grade combines probability level and expected loss level:
   - `Mid` if `0.5 <= churn_prob < 0.7`
 - Loss: `Upper` vs `Lower` (relative to `loss_median`)
 
-Grade mapping (as coded):
+Grade mapping:
 - `A` = High + Upper: recommend a top-2 action combo + active financial support.
 - `B` = High + Lower: recommend a top-1 action + minor financial support.
 - `C` = Mid + Upper: recommend a top-1 action + minor financial support.
