@@ -28,7 +28,7 @@ The modeling notebook compares several approaches on the same cleaned feature se
   - Precision-recall curve (shown for logistic regression) and PR-AUC.
   - Calibration curve (reliability diagram) for probability calibration sanity checks.
 - Hyperparameter tuning: `GridSearchCV` is used to search parameter grids for LR/RF/XGBoost.
-- Visualization: PCA to 2D (`PCA(n_components=2)`) for decision boundary plots (interpretability/teaching aid, not the production feature space).
+
 
 ### Survival Analysis (Exploratory)
 - Cox proportional hazards model via `lifelines.CoxPHFitter(penalizer=0.1)`, fit as:
@@ -43,7 +43,6 @@ Implemented in `decision_engine_SHAP.ipynb`. The decision engine is designed to 
 - Uses the trained/scaled logistic regression model (`lr_model` + `scaler`) to compute:
   - `churn_prob = lr_model.predict_proba(scaled_row)[0][1]`
 - At-risk threshold: `THRESHOLD = 0.5`
-  - If `churn_prob < 0.5`, the engine returns "no action needed".
 
 ### 2) Expected Loss Estimate (Business Proxy)
 For at-risk customers, the engine estimates potential loss using tenure and monthly charges:
